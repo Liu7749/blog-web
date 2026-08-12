@@ -1,11 +1,11 @@
 export default {
   title: "My Blog",
-  url: "https://YOUR_USERNAME.github.io/blog-web/",
-  language: "en",
+  url: "https://Liu7749.github.io/blog-web/",
+  language: "zh-CN",
   description: "Writing about technology, code, and life.",
   author: {
-    name: "Your Name",
-    email: "you@example.com",
-    url: "https://YOUR_USERNAME.github.io/blog-web/about/",
+    name: "Liu Liu",
+    email: "happlyliuliu@qq.com",
+    url: "https://Liu7749.github.io/blog-web/about/",
   },
 };
