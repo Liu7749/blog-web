@@ -60,11 +60,6 @@ export default async function (eleventyConfig) {
   // CSS & JS bundles
   eleventyConfig.addPlugin(pluginBundle, {
     toFileDirectory: "dist",
-    transforms: {
-      css: async function (content) {
-        return content;
-      },
-    },
   });
 
   // Filters

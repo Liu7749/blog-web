@@ -1,17 +1,13 @@
 ---
 pagination:
-  data: collections
+  data: collections.tagList
   size: 1
   alias: tag
-  filter:
-    - all
-    - posts
-    - nav
-  addAllPagesToCollections: true
+  addAllPagesToCollections: false
 layout: layouts/base.njk
 eleventyComputed:
   title: "Posts tagged '{{ tag }}'"
-permalink: /tags/{{ tag | slugify }}/
+permalink: /tags/{{ tag | slugify }}/index.html
 ---
 
 <div class="page-content">
