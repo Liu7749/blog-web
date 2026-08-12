@@ -1,0 +1,36 @@
+{
+  "name": "blog-web",
+  "version": "1.0.0",
+  "description": "A beautiful, minimal blog built with Eleventy and deployed on GitHub Pages.",
+  "type": "module",
+  "scripts": {
+    "build": "npx @11ty/eleventy",
+    "build-ghpages": "npx @11ty/eleventy --pathprefix=/blog-web/",
+    "start": "npx @11ty/eleventy --serve --quiet",
+    "start-ghpages": "npx @11ty/eleventy --pathprefix=/blog-web/ --serve --quiet",
+    "debug": "cross-env DEBUG=Eleventy* npx @11ty/eleventy",
+    "debugstart": "cross-env DEBUG=Eleventy* npx @11ty/eleventy --serve --quiet"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/YOUR_USERNAME/blog-web.git"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.6",
+    "@11ty/eleventy-img": "^6.0.4",
+    "@11ty/eleventy-navigation": "^1.0.5",
+    "@11ty/eleventy-plugin-rss": "^3.0.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
+    "cross-env": "^10.1.0",
+    "luxon": "^3.7.2",
+    "prismjs": "^1.30.0",
+    "zod": "^4.4.3"
+  },
+  "dependencies": {
+    "@zachleat/heading-anchors": "^1.0.5"
+  }
+}

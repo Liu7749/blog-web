@@ -1,0 +1,15 @@
+---
+layout: layouts/base.njk
+title: All Posts
+eleventyNavigation:
+  key: Blog
+  order: 2
+---
+<style>{% include "public/css/message-box.css" %}</style>
+
+<div class="page-content">
+  <h1>All Posts</h1>
+
+  {% set postslist = collections.posts %}
+  {% include "postslist.njk" %}
+</div>

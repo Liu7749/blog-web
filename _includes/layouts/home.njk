@@ -1,0 +1,17 @@
+---
+layout: layouts/base.njk
+---
+
+<div class="home-hero">
+  <h1 class="hero-title">{{ metadata.title }}</h1>
+  <p class="hero-description">{{ metadata.description }}</p>
+</div>
+
+{% set postslist = collections.posts | head(10) %}
+{% include "postslist.njk" %}
+
+{% if collections.posts.length > 10 %}
+<div class="view-all">
+  <a href="/blog/" class="btn">View all posts →</a>
+</div>
+{% endif %}

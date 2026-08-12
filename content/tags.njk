@@ -1,0 +1,18 @@
+---
+layout: layouts/base.njk
+title: Tags
+eleventyNavigation:
+  key: Tags
+  order: 4
+---
+<style>{% include "public/css/message-box.css" %}</style>
+
+<div class="page-content">
+  <h1>Tags</h1>
+  <p>Browse all posts by topic:</p>
+  <ul class="tags-list">
+  {%- for tag in collections.posts | getAllTags | sort %}
+    <li><a href="/tags/{{ tag | slugify }}/">{{ tag }}</a></li>
+  {%- endfor %}
+  </ul>
+</div>
