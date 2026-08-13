@@ -1,4 +1,4 @@
-import { IdAttributePlugin } from "@11ty/eleventy";
+import { IdAttributePlugin, HtmlBasePlugin } from "@11ty/eleventy";
 import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import pluginSyntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
@@ -26,6 +26,13 @@ export default async function (eleventyConfig) {
   });
   eleventyConfig.addPlugin(pluginNavigation);
   eleventyConfig.addPlugin(IdAttributePlugin);
+
+  // Apply the path prefix to all URLs in the HTML output.
+  // Register this explicitly (and before feedPlugin) so the RSS plugin's
+  // internal HtmlBasePlugin adds are deduplicated to a single transform.
+  eleventyConfig.addPlugin(HtmlBasePlugin, {
+    baseHref: "/blog-web/",
+  });
 
   // RSS Feed plugin
   eleventyConfig.addPlugin(feedPlugin, {
