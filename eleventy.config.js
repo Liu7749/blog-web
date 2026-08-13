@@ -44,12 +44,13 @@ export default async function (eleventyConfig) {
       limit: 10,
     },
     metadata: {
-      language: "en",
-      title: "Blog Title",
-      subtitle: "A beautiful minimal blog.",
-      base: "https://example.com/",
+      language: "zh-CN",
+      title: "My Blog",
+      subtitle: "Writing about technology, code, and life.",
+      base: "https://Liu7749.github.io/",
       author: {
-        name: "Your Name",
+        name: "Liu Liu",
+        email: "happlyliuliu@qq.com",
       },
     },
   });
